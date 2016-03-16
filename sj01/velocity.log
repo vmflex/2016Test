@@ -1,0 +1,26 @@
+2016-03-16 13:55:04,293 - ResourceManager : unable to find resource 'first.vm' in any resource loader.
+2016-03-16 14:24:31,037 - Exception parsing cache setting: false
+java.lang.ClassCastException: 'cache' doesn't map to a Boolean object
+	at org.apache.commons.collections.ExtendedProperties.getBoolean(ExtendedProperties.java:1189)
+	at org.apache.commons.collections.ExtendedProperties.getBoolean(ExtendedProperties.java:1156)
+	at org.apache.velocity.runtime.resource.loader.ResourceLoader.commonInit(ResourceLoader.java:85)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.initialize(ResourceManagerImpl.java:142)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeResourceManager(RuntimeInstance.java:730)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:263)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:678)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:238)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:86)
+	at cn.cs.demo.velocity.MyLocalVolicity.main(MyLocalVolicity.java:16)
+2016-03-16 14:26:07,897 - Exception parsing cache setting: false
+java.lang.ClassCastException: 'cache' doesn't map to a Boolean object
+	at org.apache.commons.collections.ExtendedProperties.getBoolean(ExtendedProperties.java:1189)
+	at org.apache.commons.collections.ExtendedProperties.getBoolean(ExtendedProperties.java:1156)
+	at org.apache.velocity.runtime.resource.loader.ResourceLoader.commonInit(ResourceLoader.java:85)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.initialize(ResourceManagerImpl.java:142)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeResourceManager(RuntimeInstance.java:730)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:263)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:678)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:238)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:86)
+	at cn.cs.demo.velocity.MyLocalVolicity.main(MyLocalVolicity.java:16)
+2016-03-16 14:28:14,147 - ResourceManager : unable to find resource 'first.vm' in any resource loader.

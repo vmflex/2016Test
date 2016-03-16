@@ -1,0 +1,5 @@
+Hello ${username}, this is My velocity.我的太阳啊 - 
+Date = $!{dateStr} この素晴らしいです
+
+//
+https://github.com/SoftCITS

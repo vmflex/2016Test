@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <TITLE> velocity </TITLE>
+ </HEAD>
+
+##嘿嘿,我是velocity中的注释噢
+#*
+    嘿嘿,我也是velocity中的注释噢
+*#
+
+##set($list=[1,2,3])
+#macro(d2) 
+<font size="15">$!{bodyContent} welcome to our system!!!</font>
+#end
+
+#macro(d $param1)
+<table>
+<tr><td bgcolor="pink" >$!{param1} how are you?? </td></tr>
+</table>
+#end
+
+#macro(results $dataList $bgcolor)
+	#foreach($item in $!dataList)
+		#if(${velocityCount}%2 == 0) 
+		<tr>
+			<td bgcolor="$bgcolor" ><b>${velocityCount}</b> </td>
+			<td bgcolor="$bgcolor" >$!{item.name} </td>
+			<td bgcolor="$bgcolor" >$!{item.age}</td>
+		</tr>
+		#else 
+		<tr>
+			<td bgcolor="grey" ><b>${velocityCount}</b> </td>
+			<td bgcolor="grey" >$!{item.name} </td>
+			<td bgcolor="grey" >$!{item.age}</td>
+		
+		</tr>
+		#end
+	#end
+
+#end
+#set($datalist=[{"name":"zhangsan", "age":12}, {"name":"lisi", "age":23}, {"name":"wangwu", "age":99}, {"name":"liliu", "age":32}])
+#set($bgcolor="pink")
+ <BODY>
+ Hi there
+ <table>
+ 	#results($datalist $bgcolor)
+ </table>
+ 	<hr/>
+ 	#@d2()xiakun#end
+ 	<hr/>
+ 	$request.ContextPath
+ 	<br/>
+ 	#set($!paramName = $request.getParameter("name"))
+ 	####set($session.setAttribute("sParamName",${paramName}))
+ 	<br/>
+ 	$session.getAttribute("sParamName")
+ 	<br/>
+ 	$locale
+ 	<hr/>
+ 
+ 	#d(${username})
+ 	<br/>
+    <h1>hehe,这是经过由servlet返回的velocity视图</h1>
+    hello ${username},这是你的信息
+    
+    <br/>
+    <input type="text" size="14" value="$!{address}" />
+    <br/>
+    your password is ${password}
+    
+    #foreach($i in ${list})
+        ${velocityCount}&nbsp;&nbsp;&nbsp;&nbsp;
+        ${i} &nbsp;&nbsp;&nbsp;&nbsp;<hr/>
+    #end
+    
+ </BODY>
+</HTML>

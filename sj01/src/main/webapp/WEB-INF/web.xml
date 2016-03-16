@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+	http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>InitServlet</servlet-name>
+  	<servlet-class>cn.cs.demo.sj01.InitServlet</servlet-class>
+  	<init-param>
+	  	<param-name>dbusername</param-name>
+	  	<param-value>zhangsan</param-value>
+  	</init-param>
+  	<init-param>
+	  	<param-name>dbuserpw</param-name>
+	  	<param-value>123</param-value>
+  	</init-param>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InitServlet</servlet-name>
+  	<url-pattern>/InitServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InitServlet</servlet-name>
+  	<url-pattern>/is</url-pattern>
+  </servlet-mapping>
+</web-app>
